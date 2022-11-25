@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+Khojki&display=swap');
+
+/* ======= COLORES ======= */
+
+:root{
+    --black: #222;
+    --white: #fff;
+    --azul: #0751a6;
+    --amarillo: #d3b717;
+    --rojo: #e71247;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*Estilos del header*/
+.nav-footer, .header-special {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align:center;
+    background: linear-gradient(to right, #0a141d, #2965e6); 
+  }
+  
+.header-special {
+    flex-direction: row;
+    display: flex;
+    text-decoration: none; 
+}  
+
+.nav-special {
+    display:flex;
+    align-items: center;
+}
+
+.nav-special .nav-ul a {
+    background-image: linear-gradient(to right, #fdfdfd, #1b1ed3 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: row;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    font-style:bold;
+    font-size: large;
+    padding: 10px;
+}
+
+.nav-special .nav-ul a:before {
+    background: linear-gradient(to right, #ffffff, #1241ff);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-special .nav-ul a:hover {
+    background-position: 0;
+}
+
+.nav-special .nav-ul a:hover::before {
+    width: 100%;
+}
+
+/* NAVIGATION */
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    line-height: 1rem;
+    background-color: var(--black);
+}
+.nav__center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.nav__logo{
+    font-size: 2rem;
+    color: var(--white);
+}
+.nav__logo span{
+    color: var(--amarillo);
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.nav__list span{
+    display: inline-block;
+    font-size: 3.5rem;
+    margin-top: .2rem;
+    margin-right: 2rem;
+    color: rgba(219, 216, 39, 0.541);
+}
+.carrito__icon{
+    position: relative;
+    cursor: pointer;
+}
+.carrito__icon i{
+    margin-top: .6rem;
+    font-size: 2.5rem;
+    color: var(--amarillo);
+}
+
+.title-brand{
+    color:wheat;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.title-welcome{
+    color:#0751a6;
+    text-align: center;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-family: 'Bebas Neue', cursive;
+}
