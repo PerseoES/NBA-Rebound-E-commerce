@@ -1,31 +1,28 @@
+import { Link } from 'react-router-dom';
 import '../styles.css';
+import CartWidget from './CartWidget';
 
-const NavBar = ({logo, carrito}) => {
-    return(
-<header className="header-special">
-    <div>
-        <a href="#">
-            <div className="header-logo">
-                <img src={logo} alt="logo" height="90px"/>
+const NavBar = ({ logo }) => {
+    return (
+        <header className="header-special">
+            <div>
+                <Link to="/">
+                    <div className="header-logo">
+                        <img src={logo} alt="logo" height="90px" />
+                    </div>
+                </Link>
+                <span className="title-brand">NBA Rebound</span>
             </div>
-        </a>
-        <span className="title-brand">NBA Rebound</span>
-    </div>
 
-      <nav className="nav-special">
-          <ul className="nav-ul">
-              <a href="#">INICIO</a>
-              <a href="#">SOBRE NOSOTROS</a>
-              <a href="#">CENTRO DE AYUDA</a>
-              <a href="#">PRODUCTOS</a>
-          </ul>
-      </nav>
-      <ul className="nav__list">
-        <div className="carrito__icon">
-        <img src={carrito} alt="Logo-Carrito"/>1
-        </div>
-      </ul>
-  </header>
+            <nav className="nav-special">
+                <ul className="nav-ul">
+                    <Link to='/'>INCIO</Link>
+                    <Link to='/category/zapatillas'>ZAPATILLAS</Link>
+                    <Link to='/category/camisetas'>CAMISETAS</Link>
+                </ul>
+            </nav>
+            <CartWidget />
+        </header>
     )
 }
 
